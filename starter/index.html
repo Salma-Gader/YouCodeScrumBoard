@@ -35,7 +35,7 @@
 				</div>
 				
 				<div class="">
-					<button class="btn btn-success rounded-pill " data-bs-toggle="modal" href="#modal-task"><i class="pe-1 fa fa-plus"></i> Add Task</a>
+					<button onclick="initTaskForm()" class="btn btn-success rounded-pill " data-bs-toggle="modal" href="#modal_task"><i class="pe-1 fa fa-plus"></i> Add Task</a>
 				</div>
 			</div>
 		
@@ -218,9 +218,10 @@
 							<h4 class="text-white my-auto px-1">Done (<span id="done-tasks-count">4</span>)</h4>
 
 						</div>
-						<div class=" " id="done_tasks">
+						<div class="        " id="done_tasks">
 							<!-- DONE TASKS HERE -->
 							<button class="d-flex list-group-item w-100 text-start">
+								
 								<div class="mt-1">
 									<i class="fa-regular fa-question-circle text-green fs-2"></i> 
 								</div>
@@ -299,7 +300,7 @@
 	<!-- END #app -->
 	
 	<!-- TASK MODAL -->
-	<div class="modal fade" id="modal-task">
+	<form class="modal fade" id="modal_task">
 			<div class="modal-dialog modal-dialog-centered">
 			  <div class="modal-content">
 				<div class="modal-header">
@@ -326,7 +327,7 @@
 					  </div>
 					  <label for="exampleFormControlTextarea1" class="form-label">Priority</label>
 					  <select class="form-select" aria-label="Default select example" id="modal_priority">
-						<option selected>Please select</option>
+						<option selected value="High">Please select</option>
 						<option value="Low">Low</option>
 						<option value="Medium">Medium</option>
 						<option value="High">High</option>
@@ -352,7 +353,7 @@
 			  </div>
 			</div>
 		<!-- Modal content goes here -->
-	</div>
+	</form>
 
 
 	<!-- ================== BEGIN core-js ================== -->

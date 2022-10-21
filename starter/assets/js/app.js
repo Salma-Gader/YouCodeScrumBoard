@@ -12,12 +12,15 @@ function createTask() {
    let bug_or_featur;
    if (modal_featur.checked){
        // bug_or_featur= document.querySelector('#type:checked');
+       bug_or_featur= "feature"
    }
-   else bug_or_featur= "feature";
+   else bug_or_featur= "Bug";
+
+   console.log(bug_or_featur);
 
     let  newTask ={
         'title'         : modal_title.value,
-        'type'          : bug_or_featur.value,
+        'type'          : bug_or_featur,
         'priority'      : modal_priority.value,
         'status'        : modal_status.value,
         'date'          : modal_date.value,
@@ -28,7 +31,10 @@ function createTask() {
 
     tasks.push(newTask);
     reloadTasks();
-    $("#modal-task").modal('hide');
+    $("#modal_task").modal('hide');
+    initTaskForm();
+    
+
 }
 
 function saveTask() {
@@ -81,7 +87,8 @@ function deleteTask() {
 
 function initTaskForm() {
     // Clear task form from data
-
+    //document.getElementById('modal-task')
+    modal_task.reset();
     // Hide all action buttons
 }
 
@@ -97,6 +104,7 @@ var i =0;
         i++;
         if(task.status == "To Do"){
             let button_todo = `
+    
             <button class="d-flex  list-group-item w-100 text-start">
                 <div class="mt-1">
                     <i class="fa-regular  fa-question-circle text-green fs-2"></i> 
