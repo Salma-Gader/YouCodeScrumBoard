@@ -35,7 +35,7 @@
 				</div>
 				
 				<div class="">
-					<button onclick="initTaskForm()" class="btn btn-success rounded-pill " data-bs-toggle="modal" href="#modal_task"><i class="pe-1 fa fa-plus"></i> Add Task</a>
+					<button onclick="maske_button_create()" class="btn btn-success rounded-pill " data-bs-toggle="modal" href="#modal_task"><i class="pe-1 fa fa-plus"></i> Add Task</a>
 				</div>
 			</div>
 		
@@ -44,7 +44,7 @@
 					<div class="col-lg-4 mb-3 col-sm-6 ">
 						<div class="card">
 						<div class="card-header bg-dark">
-							<h4 class="text-white my-auto px-1">To do (<span id="to-do-tasks-count">5</span>)</h4>
+							<h4 class="text-white my-auto px-1">To do (<span id="to_do_tasks_count">5</span>)</h4>
 
 						</div>
 						<div class="" id="to_do_tasks">
@@ -140,7 +140,7 @@
 					<div class="col-lg-4 mb-3 col-sm-6">
 						<div class="card">
 							<div class="card-header bg-dark">
-							<h4 class="text-white my-auto px-1">In Progress (<span id="in-progress-tasks-count">4</span>)</h4>
+							<h4 class="text-white my-auto px-1">In Progress (<span id="in_progress_tasks_count">4</span>)</h4>
 						    </div>
 						</div>
 						<div class="" id="in_progress_tasks">
@@ -167,7 +167,7 @@
 								</div>
 								<div class="ms-3">
 									<div class="fs-5">Provide access</div>
-									<div class="">
+									<div class="" >
 										<div class="text-muted">#7 created in 2022-10-08</div>
 										<div class="" title="to the affected account and services if possible. It might be hard to reproduce the exact environment on a local machine.">to the affected account and services if possible. It mi...</div>
 									</div>
@@ -215,7 +215,7 @@
 				<div class="col-lg-4 mb-3 col-sm-6">
 					<div class="">
 						<div class="card-header bg-dark">
-							<h4 class="text-white my-auto px-1">Done (<span id="done-tasks-count">4</span>)</h4>
+							<h4 class="text-white my-auto px-1">Done (<span id="done_tasks_count">4</span>)</h4>
 
 						</div>
 						<div class="        " id="done_tasks">
@@ -327,7 +327,7 @@
 					  </div>
 					  <label for="exampleFormControlTextarea1" class="form-label">Priority</label>
 					  <select class="form-select" aria-label="Default select example" id="modal_priority">
-						<option selected value="High">Please select</option>
+						<option selected >Please select</option>
 						<option value="Low">Low</option>
 						<option value="Medium">Medium</option>
 						<option value="High">High</option>
@@ -343,12 +343,15 @@
 					  <input type="date" id="modal_date" class="form-control">
 					  <div class="mb-3">
 						<label for="exampleFormControlTextarea1" class="form-label">Description</label>
-						<textarea class="form-control" id="model_description" rows="3" itemid="Description"></textarea>
+						<textarea class="form-control" id="modal_description" rows="3" itemid="Description"></textarea>
 					  </div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-light text-dark" data-bs-dismiss="modal">Cancel</button>
-					<button type="button" class="btn btn-primary" onclick="createTask()">Save</button>
+					<button type="button" class="btn btn-primary" onclick="createTask()" id=button_save_id>Save</button>
+
+					<button onclick = "updateTask()" type="button" class="btn btn-primary" id=button_Update_id >Update</button>
+					<button onclick = "deleteTask()" type="button" class="btn btn-danger" id="button_delet_id">Delet</button>
 				</div>
 			  </div>
 			</div>
